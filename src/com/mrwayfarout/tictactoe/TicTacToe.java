@@ -29,8 +29,8 @@ public class TicTacToe implements Runnable {
 	private int port = 8080;
 	private Scanner scanner = new Scanner(System.in);
 	private JFrame frame;
-	private final int WIDTH = 806;
-	private final int HEIGHT = 827;
+	private final int WIDTH = 800;
+	private final int HEIGHT = 800;
 	private Thread thread;
 
 	private Painter painter;
@@ -56,7 +56,7 @@ public class TicTacToe implements Runnable {
 	private boolean enemyWon = false;
 	private boolean tie = false;
 
-	private int lengthOfSpace = 124;
+	private int lengthOfSpace = 134;
 	private int errors = 0;
 	private int firstSpot = -1;
 	private int secondSpot = -1;
@@ -145,15 +145,15 @@ public class TicTacToe implements Runnable {
 				if (spaces[i] != null) {
 					if (spaces[i].equals("X")) {
 						if (circle) {
-							g.drawImage(xpink, (i % 5) * lengthOfSpace + 69, (int) (i / 5) * lengthOfSpace + 69, null);
+							g.drawImage(xpink, (i % 5) * lengthOfSpace + 65, (int) (i / 5) * lengthOfSpace + 65, null);
 						} else {
-							g.drawImage(xviolet, (i % 5) * lengthOfSpace + 69, (int) (i / 5) * lengthOfSpace + 69, null);
+							g.drawImage(xviolet, (i % 5) * lengthOfSpace + 65, (int) (i / 5) * lengthOfSpace + 65, null);
 						}
 					} else if (spaces[i].equals("O")) {
 						if (circle) {
-							g.drawImage(oviolet, (i % 5) * lengthOfSpace + 69, (int) (i / 5) * lengthOfSpace + 69, null);
+							g.drawImage(oviolet, (i % 5) * lengthOfSpace + 65, (int) (i / 5) * lengthOfSpace + 65, null);
 						} else {
-							g.drawImage(opink, (i % 5) * lengthOfSpace + 69, (int) (i / 5) * lengthOfSpace + 69, null);
+							g.drawImage(opink, (i % 5) * lengthOfSpace + 65, (int) (i / 5) * lengthOfSpace + 65, null);
 						}
 					}
 				}
@@ -162,7 +162,7 @@ public class TicTacToe implements Runnable {
 				Graphics2D g2 = (Graphics2D) g;
 				g2.setStroke(new BasicStroke(10));
 				g.setColor(Color.BLACK);
-				g.drawLine(firstSpot % 5 * lengthOfSpace + 69 * firstSpot % 5 + lengthOfSpace / 2, (int) (firstSpot / 5) * lengthOfSpace + 69 * (int) (firstSpot / 5) + lengthOfSpace / 2, secondSpot % 5 * lengthOfSpace + 69 * secondSpot % 5 + lengthOfSpace / 2, (int) (secondSpot / 5) * lengthOfSpace + 69 * (int) (secondSpot / 5) + lengthOfSpace / 2);
+				g.drawLine(firstSpot % 5 * lengthOfSpace + 65 * firstSpot % 5 + lengthOfSpace / 2, (int) (firstSpot / 5) * lengthOfSpace + 65 * (int) (firstSpot / 5) + lengthOfSpace / 2, secondSpot % 5 * lengthOfSpace + 65 * secondSpot % 5 + lengthOfSpace / 2, (int) (secondSpot / 5) * lengthOfSpace + 65 * (int) (secondSpot / 5) + lengthOfSpace / 2);
 
 				g.setColor(Color.RED);
 				g.setFont(largerFont);
